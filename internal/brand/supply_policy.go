@@ -90,9 +90,3 @@ func CloneCatalog(snapshot CatalogSnapshot) CatalogSnapshot {
 	}
 	return clone
 }
-
-func lineageReviewSnapshot(lot IngredientLot) IngredientLot {
-	clone := lot
-	clone.ParentLotIDs = []string{"missing"}
-	return clone
-}

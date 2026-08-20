@@ -64,8 +64,6 @@ func (s *Service) CheckAppeal(_ context.Context, appeal Appeal, inspection Inspe
 }
 
 func (s *Service) CheckLotTrace(_ context.Context, lot IngredientLot, known map[string]IngredientLot) error {
-	lot = lineageReviewSnapshot(lot)
-
 	return ValidateLotTrace(lot, known)
 }
 
